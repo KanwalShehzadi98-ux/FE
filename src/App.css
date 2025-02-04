@@ -1,0 +1,87 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure the app takes full height */
+}
+
+.navbar {
+  background-color: #010638;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 260px; /* Sidebar width */
+  width: calc(100% - 260px);
+  height: 60px; /* Fixed height for navbar */
+  z-index: 1000;
+}
+
+.app-container {
+  display: flex;
+  flex: 1; /* Allow content to take remaining space */
+  margin-top: -545px; /* Height of the navbar */
+  padding-top: 20px; /* Optional: Add padding for better spacing */
+  position: relative;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #010638;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.content {
+  margin-left: 260px; /* Leave space for the sidebar */
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  height: 100%; /* Ensure content takes remaining space */
+}
+
+.metrics-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.metric-title {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.metric-value {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.metric-value:hover {
+  opacity: 0.8;
+}

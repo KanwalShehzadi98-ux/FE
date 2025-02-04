@@ -1,0 +1,63 @@
+.download-container {
+    display: flex;
+    justify-content: flex-start; /* Align the content to the left */
+    align-items: flex-start; /* Align the content to the top */
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px; /* Space above */
+    padding-left: 20px; /* Same space on the left */
+}
+
+.download-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.download-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.graph-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+.graph-list li {
+    display: flex;
+    align-items: center;
+}
+
+.graph-list label {
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.download-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #45a049;
+}

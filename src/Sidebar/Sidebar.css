@@ -1,0 +1,88 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  width: 260px !important;
+  height: 100vh;
+  background-color: #010638 !important;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 4px solid #2196f3;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer; /* Add this line to change cursor on hover */
+}
+
+.logo img {
+  width: 90% !important;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.nav-links li {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 40px;
+  width: 100%;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a svg {
+  margin-right: 16px;
+  margin-left: 25px;
+}
+
+.nav-links li a:hover {
+  background-color: transparent;
+  border-top: 2px solid #368fe2;
+  border-bottom: 2px solid #368fe2;
+  border-left: 2px solid #368fe2;
+}
+
+.nav-links li a:focus, .nav-links li a.active-link {
+  background-color: #368fe2;
+  color: white;
+  border-top: 2px solid #368fe2;
+  border-bottom: 2px solid #368fe2;
+  border-left: 2px solid #368fe2;
+}

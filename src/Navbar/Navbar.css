@@ -1,0 +1,59 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  padding: 5px 20px;
+  background-color: #010638;
+  color: #ffffff;
+  height: 50px;
+  width: 100%;
+  border-bottom: 4px solid #2196f3; /* Blue border */
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-label {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #ffffff;
+}
+
+.navbar-value {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.accuracy .navbar-value {
+  background-color: #4caf50; /* Green for Accuracy */
+}
+
+.precision .navbar-value {
+  background-color: #2196f3; /* Blue for Precision */
+}
+
+.recall .navbar-value {
+  background-color: #f44336; /* Red for Recall */
+}
+
+.f1-score .navbar-value {
+  background-color: #ff9800; /* Orange for F1 Score */
+}
+
+.auc .navbar-value {
+  background-color: #9c27b0; /* Purple for AUC-ROC */
+}

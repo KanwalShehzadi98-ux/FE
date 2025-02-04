@@ -1,0 +1,180 @@
+.overview-container {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 76%;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.subsection {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 2px dotted #368fe2;
+  box-sizing: border-box;
+  aspect-ratio: 2 / 1;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subsection:nth-child(1) {
+  padding: 20px;
+  border: 2px dotted #368fe2;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 70%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-area span {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #010638;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.subsection video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+}
+
+.subsection h2 {
+  color: #010638;
+}
+
+.subsection input[type="file"] {
+  margin-top: 10px;
+}
+
+.subsection p {
+  color: #555;
+  font-size: 16px;
+}
+
+.overview-container h1 {
+  text-align: center;
+  color: #010638;
+}
+
+.menu {
+  margin-top: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  overflow: hidden;
+}
+
+.menu button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+  width: 100%;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.menu button svg {
+  margin-right: 10px;
+}
+
+.menu button:hover {
+  background-color: #e6f7ff;
+  color: #0056b3;
+  transform: translateX(3px);
+}
+
+.menu button:active {
+  background-color: #cceeff;
+}
+
+/* Action container positioning (above video) */
+.action-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10; /* Ensures it stays above the video */
+}
+
+/* Floating action icon (ball) */
+.action-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #368fe2;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 10; /* Ensure it stays on top of the video */
+}
+
+/* Ensure the video container doesn't overlap the action container */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Keeps video below the action container */
+}
+
+/* Video element */
+.subsection video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  z-index: 1; /* Keeps video below the action container */
+}

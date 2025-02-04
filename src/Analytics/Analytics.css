@@ -1,0 +1,144 @@
+/* Overall Container Styling */
+.analytics-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - 260px);
+    margin-left: -35px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Section Styling */
+.analytics-section {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Placeholder Boxes */
+.placeholder {
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #666;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* GIF Specific Styling */
+.placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Ball Styling (Similar to Overview.js) */
+.ball {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #368fe2; /* Blue color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ball:hover {
+    background-color: #2377b1; /* Darker blue color on hover */
+}
+
+/* Ball Options Styling */
+.ball-options {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+}
+
+.ball:hover .ball-options {
+    display: block;
+}
+
+/* Ball Options Button Styling */
+.ball-options button {
+    margin: 5px 0;
+    padding: 8px 16px;
+    background-color: #368fe2; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.ball-options button:hover {
+    background-color: #2377b1; /* Darker blue on hover */
+}
+
+/* Full-Screen Modal (if required in future use cases) */
+.full-screen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.full-screen-img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .analytics-container {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .placeholder {
+        width: 100%;
+        height: 300px;
+        font-size: 16px;
+    }
+
+    .ball {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ball-options button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
